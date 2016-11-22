@@ -25,6 +25,7 @@ import sinia.com.bobo.adapter.AttentionLivingAdapter;
 import sinia.com.bobo.base.BaseFragment;
 import sinia.com.bobo.bean.LiveThumbModel;
 import sinia.com.bobo.utils.FullyGridLayoutManager;
+import sinia.com.bobo.utils.GridSpacingItemDecoration;
 
 import static sinia.com.bobo.R.id.recycleView;
 
@@ -108,16 +109,19 @@ public class RecommendFragment extends BaseFragment {
         adapter = new AttentionLivingAdapter(getActivity(), allhotList);
         rvAll.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvAll.setHasFixedSize(true);
+        rvAll.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         rvAll.setAdapter(adapter);
 
         adapter = new AttentionLivingAdapter(getActivity(), entertainmentList);
         rvEntainment.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvEntainment.setHasFixedSize(true);
+        rvEntainment.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         rvEntainment.setAdapter(adapter);
 
         adapter = new AttentionLivingAdapter(getActivity(), lifeList);
         rvLife.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvLife.setHasFixedSize(true);
+        rvLife.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         rvLife.setAdapter(adapter);
 
     }

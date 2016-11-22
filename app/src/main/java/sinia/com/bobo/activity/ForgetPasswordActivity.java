@@ -1,13 +1,11 @@
 package sinia.com.bobo.activity;
 
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sinia.com.bobo.R;
 import sinia.com.bobo.base.BaseActivity;

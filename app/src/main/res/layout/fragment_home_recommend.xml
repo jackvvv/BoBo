@@ -9,6 +9,7 @@
     <sinia.com.bobo.view.MyScrollview
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:overScrollMode="never">
 
         <LinearLayout
@@ -21,12 +22,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 app:delay_time="2000"
-                app:indicator_height="5dp"
-                app:indicator_width="5dp"
                 app:image_scale_type="center_crop"
                 app:indicator_drawable_selected="@drawable/indicator_select"
                 app:indicator_drawable_unselected="@drawable/indicator_not_select"
-                app:indicator_margin="4dp" />
+                app:indicator_height="5dp"
+                app:indicator_margin="4dp"
+                app:indicator_width="5dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -40,7 +41,8 @@
                 android:id="@+id/recycleView_all"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never" />
+                android:overScrollMode="never"
+                android:padding="10dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -54,7 +56,8 @@
                 android:id="@+id/rv_entainment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never" />
+                android:overScrollMode="never"
+                android:padding="10dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -68,7 +71,8 @@
                 android:id="@+id/rv_life"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:overScrollMode="never" />
+                android:overScrollMode="never"
+                android:padding="10dp" />
         </LinearLayout>
     </sinia.com.bobo.view.MyScrollview>
 </LinearLayout>

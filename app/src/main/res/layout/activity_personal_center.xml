@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@drawable/black_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="个人资料"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="头像"
+                android:textColor="@color/textblackColor"
+                android:textSize="15sp" />
+
+            <sinia.com.bobo.view.CircleImageView
+                android:id="@+id/img_head"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/s"
+                android:src="@drawable/ic_head_notlogin" />
+
+            <ImageView
+                android:id="@+id/s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_detail_jian" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="昵称"
+                android:textColor="@color/textblackColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/sa"
+                android:layout_toRightOf="@+id/tv_place"
+                android:gravity="right"
+                android:text="周杰伦"
+                android:textColor="#999"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/sa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_detail_jian" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="修改昵称需要支付500播币"
+            android:textColor="@color/textblackColor2"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_real"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/real"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="实名认证"
+                android:textColor="@color/textblackColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_real"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/real"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_detail_jian"
+                android:gravity="right"
+                android:text="未设置"
+                android:textColor="#E88D23"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="邮箱"
+                android:textColor="@color/textblackColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/sex"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/ic_detail_jian"
+                android:gravity="right"
+                android:text="未设置"
+                android:textColor="#E88D23"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_tel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="手机号绑定"
+                android:textColor="@color/textblackColor"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/ss"
+                android:layout_toRightOf="@+id/address"
+                android:gravity="right"
+                android:maxLength="11"
+                android:text="1852719982"
+                android:textColor="#999"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_detail_jian" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_qq"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="QQ填写"
+                android:textColor="@color/textblackColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_qq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/ssss"
+                android:layout_toRightOf="@+id/area"
+                android:gravity="right"
+                android:text="未设置"
+                android:textColor="#E88D23"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/ssss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_detail_jian" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_level"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/layout_selector"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="等级"
+                android:textColor="@color/textblackColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/sss"
+                android:background="@drawable/theme_color_btn_draw"
+                android:gravity="right"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Lv1"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/sss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_detail_jian"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_logout"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:background="@drawable/theme_color_btn_draw"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -18,6 +18,7 @@ import sinia.com.bobo.adapter.AttentionLivingAdapter;
 import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
 import sinia.com.bobo.base.BaseFragment;
 import sinia.com.bobo.bean.LiveThumbModel;
+import sinia.com.bobo.utils.GridSpacingItemDecoration;
 
 /**
  * Created by 忧郁的眼神 on 2016/11/18 0018.
@@ -56,6 +57,7 @@ public class AttentionLivingFragment extends BaseFragment {
         adapter = new AttentionLivingAdapter(getActivity(), liveList);
         recycleView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
         recycleView.setHasFixedSize(true);
+        recycleView.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         recycleView.setAdapter(adapter);
         adapter.setOnItemClickListener(R.id.img, new LGRecycleViewAdapter.ItemClickListener() {
             @Override

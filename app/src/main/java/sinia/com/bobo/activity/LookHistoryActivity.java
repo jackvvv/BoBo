@@ -1,12 +1,11 @@
-package sinia.com.bobo.fragment;
+package sinia.com.bobo.activity;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.view.ViewGroup;
+
+import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,16 +14,22 @@ import butterknife.Bind;
 import sinia.com.bobo.R;
 import sinia.com.bobo.adapter.AttentionLivingAdapter;
 import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
-import sinia.com.bobo.base.BaseFragment;
+import sinia.com.bobo.base.BaseActivity;
 import sinia.com.bobo.bean.LiveThumbModel;
 import sinia.com.bobo.utils.GridSpacingItemDecoration;
+import sinia.com.bobo.view.swipmenulistview.SwipeMenuListView;
+
+import static sinia.com.bobo.R.id.recycleView;
+import static sinia.com.bobo.R.id.toolBar;
 
 /**
- * Created by 忧郁的眼神 on 2016/11/17 0017.
+ * Created by 忧郁的眼神 on 2016/11/21 0021.
  */
 
-public class LocalCityFragment extends BaseFragment {
+public class LookHistoryActivity extends BaseActivity {
 
+    @Bind(R.id.toolBar)
+    Toolbar toolBar;
     @Bind(R.id.recycleView)
     RecyclerView recycleView;
 
@@ -32,14 +37,14 @@ public class LocalCityFragment extends BaseFragment {
     private List<LiveThumbModel> liveList = new ArrayList<>();
 
     @Override
-    public View initView(LayoutInflater inflater, ViewGroup container) {
-        View view = inflater.inflate(R.layout.fragment_nearby, container, false);
-        return view;
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
+    protected void initView() {
+        setContentView(R.layout.activity_look_history);
+        toolBar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         initData();
     }
 
@@ -54,8 +59,8 @@ public class LocalCityFragment extends BaseFragment {
             live.setImgUrl("https://rpic.douyucdn.cn/appCovers/2016/11/15/1378146_201611151633_big.jpg");
             liveList.add(live);
         }
-        adapter = new AttentionLivingAdapter(getActivity(), liveList);
-        recycleView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+        adapter = new AttentionLivingAdapter(this, liveList);
+        recycleView.setLayoutManager(new GridLayoutManager(this, 2));
         recycleView.setHasFixedSize(true);
         recycleView.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         recycleView.setAdapter(adapter);
@@ -65,5 +70,10 @@ public class LocalCityFragment extends BaseFragment {
                 showToast("sss");
             }
         });
+    }
+
+    @Override
+    protected boolean isSlideFinish() {
+        return true;
     }
 }

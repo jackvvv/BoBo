@@ -57,6 +57,13 @@
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.LookHistoryActivity" />
+        <activity android:name=".activity.PersonalActivity" />
+        <activity android:name=".activity.ChangeNickNameActivity" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".activity.AboutUsActivity" />
+        <activity android:name=".activity.FeedBackActivity" />
     </application>
 
 </manifest>
