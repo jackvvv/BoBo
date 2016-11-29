@@ -18,11 +18,18 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sinia.com.bobo.R;
+import sinia.com.bobo.activity.AttentionManagerActivity;
 import sinia.com.bobo.activity.LookHistoryActivity;
 import sinia.com.bobo.activity.MessageActivity;
+import sinia.com.bobo.activity.OpenLiveAlertActivity;
 import sinia.com.bobo.activity.PersonalActivity;
+import sinia.com.bobo.activity.RechargeActivity;
 import sinia.com.bobo.activity.SettingsActivity;
+import sinia.com.bobo.activity.StartLiveActivity;
+import sinia.com.bobo.activity.StopLiveActivity;
 import sinia.com.bobo.base.BaseFragment;
+import sinia.com.bobo.utils.BlurBehind;
+import sinia.com.bobo.utils.OnBlurCompleteListener;
 
 /**
  * Created by 忧郁的眼神 on 2016/11/17 0017.
@@ -77,6 +84,12 @@ public class MineFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.fab_live:
+                BlurBehind.getInstance().execute(getActivity(), new OnBlurCompleteListener() {
+                    @Override
+                    public void onBlurComplete() {
+                        startLoginActivityForNoIntent(StopLiveActivity.class);
+                    }
+                });
                 break;
             case R.id.rl_sign:
                 break;
@@ -87,12 +100,15 @@ public class MineFragment extends BaseFragment {
                 startActivityForNoIntent(LookHistoryActivity.class);
                 break;
             case R.id.tv_attention_manager:
+                startActivityForNoIntent(AttentionManagerActivity.class);
                 break;
             case R.id.tv_task:
                 break;
             case R.id.tv_recharge:
+                startActivityForNoIntent(RechargeActivity.class);
                 break;
             case R.id.tv_alert:
+                startActivityForNoIntent(OpenLiveAlertActivity.class);
                 break;
             case R.id.tv_settings:
                 startActivityForNoIntent(SettingsActivity.class);

@@ -8,10 +8,14 @@ import com.dou361.baseutils.utils.LogUtils;
 import com.dou361.baseutils.utils.UtilsManager;
 import com.tencent.bugly.Bugly;
 import com.tencent.bugly.beta.Beta;
+import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
 
 import static com.tencent.bugly.crashreport.crash.c.a;
 import static com.tencent.bugly.crashreport.crash.c.i;
@@ -35,6 +39,10 @@ public class BaseApplication extends Application {
         UtilsManager.getInstance().setLogLevel(LogUtils.LogType.LEVEL_ERROR);
         Bugly.init(getApplicationContext(), "f82c7ea5ff", false);
         Beta.checkUpgrade(false, false);
+        //OkHttpClient初始化
+        OkHttpClient okHttpClient = new OkHttpClient.Builder().connectTimeout(10000L, TimeUnit.MILLISECONDS)
+                .readTimeout(10000L, TimeUnit.MILLISECONDS).build();
+        OkHttpUtils.initClient(okHttpClient);
     }
 
     public static BaseApplication getInstance() {

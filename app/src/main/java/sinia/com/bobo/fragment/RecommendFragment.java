@@ -21,7 +21,9 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import sinia.com.bobo.R;
+import sinia.com.bobo.activity.LiveDetailActivity;
 import sinia.com.bobo.adapter.AttentionLivingAdapter;
+import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
 import sinia.com.bobo.base.BaseFragment;
 import sinia.com.bobo.bean.LiveThumbModel;
 import sinia.com.bobo.utils.FullyGridLayoutManager;
@@ -43,7 +45,9 @@ public class RecommendFragment extends BaseFragment {
     @Bind(R.id.rv_life)
     RecyclerView rvLife;
 
-    private AttentionLivingAdapter adapter;
+    private AttentionLivingAdapter adapter1;
+    private AttentionLivingAdapter adapter2;
+    private AttentionLivingAdapter adapter3;
     private List<LiveThumbModel> allhotList = new ArrayList<>();
     private List<LiveThumbModel> entertainmentList = new ArrayList<>();
     private List<LiveThumbModel> lifeList = new ArrayList<>();
@@ -106,24 +110,42 @@ public class RecommendFragment extends BaseFragment {
             live.setImgUrl("https://rpic.douyucdn.cn/a1611/18/15/713239_161118150548.jpg");
             lifeList.add(live);
         }
-        adapter = new AttentionLivingAdapter(getActivity(), allhotList);
+        adapter1 = new AttentionLivingAdapter(getActivity(), allhotList);
         rvAll.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvAll.setHasFixedSize(true);
         rvAll.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
-        rvAll.setAdapter(adapter);
+        rvAll.setAdapter(adapter1);
 
-        adapter = new AttentionLivingAdapter(getActivity(), entertainmentList);
+        adapter2 = new AttentionLivingAdapter(getActivity(), entertainmentList);
         rvEntainment.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvEntainment.setHasFixedSize(true);
         rvEntainment.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
-        rvEntainment.setAdapter(adapter);
+        rvEntainment.setAdapter(adapter2);
 
-        adapter = new AttentionLivingAdapter(getActivity(), lifeList);
+        adapter3 = new AttentionLivingAdapter(getActivity(), lifeList);
         rvLife.setLayoutManager(new FullyGridLayoutManager(getActivity(), 2));
         rvLife.setHasFixedSize(true);
         rvLife.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
-        rvLife.setAdapter(adapter);
+        rvLife.setAdapter(adapter3);
 
+        adapter1.setOnItemClickListener(R.id.root, new LGRecycleViewAdapter.ItemClickListener() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                startActivityForNoIntent(LiveDetailActivity.class);
+            }
+        });
+        adapter2.setOnItemClickListener(R.id.root, new LGRecycleViewAdapter.ItemClickListener() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                startActivityForNoIntent(LiveDetailActivity.class);
+            }
+        });
+        adapter3.setOnItemClickListener(R.id.root, new LGRecycleViewAdapter.ItemClickListener() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                startActivityForNoIntent(LiveDetailActivity.class);
+            }
+        });
     }
 
     @Override

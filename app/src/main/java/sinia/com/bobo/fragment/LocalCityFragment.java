@@ -13,6 +13,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import sinia.com.bobo.R;
+import sinia.com.bobo.activity.LiveDetailActivity;
 import sinia.com.bobo.adapter.AttentionLivingAdapter;
 import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
 import sinia.com.bobo.base.BaseFragment;
@@ -59,10 +60,10 @@ public class LocalCityFragment extends BaseFragment {
         recycleView.setHasFixedSize(true);
         recycleView.addItemDecoration(new GridSpacingItemDecoration(2, 20, false));
         recycleView.setAdapter(adapter);
-        adapter.setOnItemClickListener(R.id.img, new LGRecycleViewAdapter.ItemClickListener() {
+        adapter.setOnItemClickListener(R.id.root, new LGRecycleViewAdapter.ItemClickListener() {
             @Override
             public void onItemClicked(View view, int position) {
-                showToast("sss");
+                startActivityForNoIntent(LiveDetailActivity.class);
             }
         });
     }

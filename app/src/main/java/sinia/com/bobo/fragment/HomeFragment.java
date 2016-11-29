@@ -17,8 +17,14 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sinia.com.bobo.R;
+import sinia.com.bobo.activity.LivePrevueActivity;
+import sinia.com.bobo.activity.LookHistoryActivity;
+import sinia.com.bobo.activity.SearchActivity;
+import sinia.com.bobo.activity.StartLiveActivity;
 import sinia.com.bobo.adapter.MyFragmentPagerAdapter;
 import sinia.com.bobo.base.BaseFragment;
+import sinia.com.bobo.utils.BlurBehind;
+import sinia.com.bobo.utils.OnBlurCompleteListener;
 
 /**
  * Created by 忧郁的眼神 on 2016/11/17 0017.
@@ -76,12 +82,21 @@ public class HomeFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.img_history:
+                startActivityForNoIntent(LookHistoryActivity.class);
                 break;
             case R.id.img_preview:
+                startActivityForNoIntent(LivePrevueActivity.class);
                 break;
             case R.id.img_search:
+                startActivityForNoIntent(SearchActivity.class);
                 break;
             case R.id.fab_live:
+                BlurBehind.getInstance().execute(getActivity(), new OnBlurCompleteListener() {
+                    @Override
+                    public void onBlurComplete() {
+                        startLoginActivityForNoIntent(StartLiveActivity.class);
+                    }
+                });
                 break;
         }
     }

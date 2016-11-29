@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">播播</string>
+    <string name="vitamio_name">Vitamio</string>
+    <string name="vitamio_init_decoders">Initializing decoders…</string>
+    <string name="vitamio_videoview_error_title">Cannot play video</string>
+    <string name="vitamio_videoview_error_text_invalid_progressive_playback">Sorry, this video is not valid for streaming to
+		this device.</string>
+    <string name="vitamio_videoview_error_text_unknown">Sorry, this video cannot be played.</string>
+    <string name="vitamio_videoview_error_button">OK</string>
+    <string name="mediacontroller_play_pause">Play/Pause</string>
+    <string name="renzheng_title">实名认证是主播申请途中最重要的一步，为确保您顺利通过认证，请准确填写个人信息，谢谢配合。</string>
+    <string name="renzheng_age">申请人未满18周岁。</string>
+    <string name="renzheng_xz">申请人被播播平台限制认证。</string>
+    <string name="renzheng_account">实名资料被其他播播账号占用。</string>
+    <string name="renzheng_other">如以上都不在范围内还是无法认证成功的，请联系客服人工申请QQ:XXXX 或微信:XXXX。</string>
+    <string name="renzheng_warning">账号不得以任何形式转让或售卖给他人！若发现账号有违规违法行为，或者其他形式的恶劣情节，我们将配合警方予以实名备案，产生后果将由您自行承担！</string>
 </resources>

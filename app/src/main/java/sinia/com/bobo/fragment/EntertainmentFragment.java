@@ -22,7 +22,9 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import sinia.com.bobo.R;
+import sinia.com.bobo.activity.LiveDetailActivity;
 import sinia.com.bobo.adapter.AttentionLivingAdapter;
+import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
 import sinia.com.bobo.base.BaseFragment;
 import sinia.com.bobo.bean.LiveThumbModel;
 import sinia.com.bobo.utils.FullyGridLayoutManager;
@@ -85,6 +87,12 @@ public class EntertainmentFragment extends BaseFragment {
             }
         }).start();
 
+        adapter.setOnItemClickListener(R.id.root, new LGRecycleViewAdapter.ItemClickListener() {
+            @Override
+            public void onItemClicked(View view, int position) {
+                startActivityForNoIntent(LiveDetailActivity.class);
+            }
+        });
     }
 
     @Override

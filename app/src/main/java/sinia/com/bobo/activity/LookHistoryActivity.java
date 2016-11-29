@@ -1,26 +1,23 @@
 package sinia.com.bobo.activity;
 
+import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.bartoszlipinski.recyclerviewheader.RecyclerViewHeader;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import sinia.com.bobo.R;
 import sinia.com.bobo.adapter.AttentionLivingAdapter;
 import sinia.com.bobo.adapter.recycleadapter.LGRecycleViewAdapter;
 import sinia.com.bobo.base.BaseActivity;
 import sinia.com.bobo.bean.LiveThumbModel;
 import sinia.com.bobo.utils.GridSpacingItemDecoration;
-import sinia.com.bobo.view.swipmenulistview.SwipeMenuListView;
-
-import static sinia.com.bobo.R.id.recycleView;
-import static sinia.com.bobo.R.id.toolBar;
 
 /**
  * Created by 忧郁的眼神 on 2016/11/21 0021.
@@ -75,5 +72,9 @@ public class LookHistoryActivity extends BaseActivity {
     @Override
     protected boolean isSlideFinish() {
         return true;
+    }
+
+    @OnClick(R.id.tv_clear)
+    public void onClick() {
     }
 }

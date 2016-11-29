@@ -63,4 +63,10 @@ public class LoginActivity extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0, R.anim.login_close);
+    }
 }

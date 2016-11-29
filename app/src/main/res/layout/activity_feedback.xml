@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        app:navigationIcon="@drawable/black_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="意见反馈"
+            android:textColor="#000"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/gray_round_edit_draw2"
+        android:hint="输入标题"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textColor="@color/textblackColor"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/gray_round_edit_draw2"
+        android:gravity="left|top"
+        android:hint="输入反馈内容"
+        android:inputType="textMultiLine"
+        android:padding="10dp"
+        android:textColor="@color/textblackColor"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_submit"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/theme_color_btn_draw"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+</LinearLayout>

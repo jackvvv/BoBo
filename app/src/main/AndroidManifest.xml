@@ -64,6 +64,23 @@
         <activity android:name=".activity.SettingsActivity" />
         <activity android:name=".activity.AboutUsActivity" />
         <activity android:name=".activity.FeedBackActivity" />
+        <activity
+            android:name=".activity.SearchActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.OpenLiveAlertActivity" />
+        <activity android:name=".activity.AttentionManagerActivity" />
+        <activity android:name=".activity.RechargeActivity" />
+        <activity
+            android:name=".activity.StartLiveActivity"
+            android:theme="@style/FullScreenAppTheme" />
+        <activity
+            android:name=".activity.StopLiveActivity"
+            android:theme="@style/FullScreenAppTheme" />
+        <activity android:name=".activity.LivePrevueActivity" />
+        <activity android:name=".activity.LiveDetailActivity" />
+        <activity android:name=".activity.CertificationActivity" />
+        <activity android:name=".activity.PerfectInfo2Activity" />
+        <activity android:name=".activity.PerfectInfo1Activity" />
     </application>
 
 </manifest>
