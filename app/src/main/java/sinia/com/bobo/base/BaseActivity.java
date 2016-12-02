@@ -59,6 +59,9 @@ public abstract class BaseActivity extends TakePhotoActivity {
             //设置状态栏字体图标黑色
             sinia.com.bobo.utils.StatusBarUtil.StatusBarLightMode(this, true);
         } else {
+            if (closeOpenStatusBar()) {
+                return;
+            }
             //设置登录注册页面绿色状态栏
             setLoginStatusBar();
         }
@@ -128,6 +131,10 @@ public abstract class BaseActivity extends TakePhotoActivity {
      */
     protected boolean isOpenStatusBar() {
         return true;
+    }
+
+    protected boolean closeOpenStatusBar() {
+        return false;
     }
 
     /**

@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff"
-    android:fitsSystemWindows="true"
     android:orientation="vertical">
 
     <android.support.v7.widget.Toolbar
@@ -38,85 +37,13 @@
         </LinearLayout>
     </android.support.v7.widget.Toolbar>
 
-    <RelativeLayout
+    <com.dl7.player.media.IjkPlayerView
+        android:id="@+id/player_view"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
-        android:background="#fff"
-        android:orientation="vertical">
-
-        <sinia.com.bobo.view.NEVideoView
-            android:id="@+id/videoView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
-            android:background="@drawable/transparent_round_bg1"
-            android:orientation="vertical"
-            android:padding="5dp">
-
-            <TextView
-                android:id="@+id/tv_room"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="房号: 09256741"
-                android:textColor="#fff"
-                android:textSize="12sp" />
-
-            <TextView
-                android:id="@+id/tv_people"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="人气: 130"
-                android:textColor="#fff"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/img_control"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="10dp"
-            android:layout_toLeftOf="@+id/img_full"
-            android:src="@drawable/ic_stop" />
-
-        <ImageView
-            android:id="@+id/img_full"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="10dp"
-            android:src="@drawable/ic_full" />
-
-        <LinearLayout
-            android:id="@+id/layout_loading"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ProgressBar
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
-
-            <TextView
-                android:id="@+id/tv_present"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:text="正在缓冲..."
-                android:textColor="@android:color/white" />
-
-        </LinearLayout>
-    </RelativeLayout>
+        android:layout_height="220dp" />
 
     <LinearLayout
+        android:id="@+id/ll_tab"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/colorPrimary"

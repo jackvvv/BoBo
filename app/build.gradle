@@ -11,10 +11,10 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        ndk {
-            // 设置支持的SO库架构
-            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'arm64-v8a'
-        }
+//        ndk {
+//            // 设置支持的SO库架构
+//            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'arm64-v8a'
+//        }
     }
     buildTypes {
         release {
@@ -22,17 +22,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-    sourceSets {
-        main {
-            jni.srcDirs = []
-            jniLibs.srcDirs = ['libs']
-        }
-    }
-    repositories {  //本地aar方式
-        flatDir {
-            dirs 'libs' //this way we can find the .aar file in libs folder
-        }
-    }
+//    sourceSets {
+//        main {
+//            jni.srcDirs = []
+//            jniLibs.srcDirs = ['libs']
+//        }
+//    }
+//    repositories {  //本地aar方式
+//        flatDir {
+//            dirs 'libs' //this way we can find the .aar file in libs folder
+//        }
+//    }
 }
 
 dependencies {
@@ -77,4 +77,14 @@ dependencies {
     compile 'com.zhy:okhttputils:2.6.2'
     compile project(path: ':takephoto_library')
     compile files('libs/NELivePlayer.jar')
+
+    compile 'com.github.ctiao:DanmakuFlameMaster:0.5.5'
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.7.5'
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.7.5'
+
+    compile 'tv.danmaku.ijk.media:ijkplayer-armv5:0.7.5'
+    compile 'tv.danmaku.ijk.media:ijkplayer-arm64:0.7.5'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86:0.7.5'
+    compile 'tv.danmaku.ijk.media:ijkplayer-x86_64:0.7.5'
 }

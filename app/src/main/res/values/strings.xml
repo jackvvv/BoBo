@@ -14,4 +14,15 @@
     <string name="renzheng_account">实名资料被其他播播账号占用。</string>
     <string name="renzheng_other">如以上都不在范围内还是无法认证成功的，请联系客服人工申请QQ:XXXX 或微信:XXXX。</string>
     <string name="renzheng_warning">账号不得以任何形式转让或售卖给他人！若发现账号有违规违法行为，或者其他形式的恶劣情节，我们将配合警方予以实名备案，产生后果将由您自行承担！</string>
+
+    <string name="video_record">记忆上次播放到</string>
+    <string name="video_skip">继续播放</string>
+
+    <string-array name="media_quality">
+        <item>流畅</item>
+        <item>清晰</item>
+        <item>高清</item>
+        <item>超清</item>
+        <item>1080P</item>
+    </string-array>
 </resources>

@@ -15,6 +15,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import sinia.com.bobo.R;
 import sinia.com.bobo.base.BaseActivity;
+import sinia.com.bobo.base.BaseApplication;
 import sinia.com.bobo.utils.DataCleanManager;
 
 import static java.util.ResourceBundle.clearCache;
@@ -78,10 +79,13 @@ public class SettingsActivity extends BaseActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
+        tvAlpha.setText(BaseApplication.getInstance().getDanmuAlpha() + "%");
+        seekbarAlpha.setProgress((int) BaseApplication.getInstance().getDanmuAlpha());
         seekbarAlpha.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 tvAlpha.setText(progress + "%");
+                BaseApplication.getInstance().setDanmuAlpha(progress);
             }
 
             @Override

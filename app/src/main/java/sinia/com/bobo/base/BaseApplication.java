@@ -28,6 +28,7 @@ public class BaseApplication extends Application {
 
     private static BaseApplication instance;
     private static final LinkedList<BaseActivity> mActivities = new LinkedList<BaseActivity>();
+    private float danmuAlpha = 1f;
 
     @Override
     public void onCreate() {
@@ -105,5 +106,13 @@ public class BaseApplication extends Application {
     public void exitApp() {
         finishAllActivity();
         android.os.Process.killProcess(android.os.Process.myPid());
+    }
+
+    public float getDanmuAlpha() {
+        return danmuAlpha;
+    }
+
+    public void setDanmuAlpha(float danmuAlpha) {
+        this.danmuAlpha = danmuAlpha;
     }
 }
